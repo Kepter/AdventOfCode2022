@@ -44,8 +44,6 @@ int main(int argc, char *argv[])
     int colCount = isVisible[0].size();
     int max = -1;
 
-    std::cout << "rows: " << rowCount << "  cols: " << colCount << "\n";
-
     // Count columns up/down
     for (int row=0; row<rowCount; row++)
     {
@@ -54,7 +52,6 @@ int main(int argc, char *argv[])
             bool a, b, c, d;
             a = b = c = d = false;
 
-            std::cout << "{" << row << ","<<col<<"} ";
             for (int i=1; !a || !b || !c || !d; i++)
             {
                 if (!a)
@@ -63,7 +60,6 @@ int main(int argc, char *argv[])
                     {
                         isVisible[row][col] *= i;
                         a = true;
-                        std::cout << "a="<< i;
                     }
                 }
 
@@ -73,7 +69,6 @@ int main(int argc, char *argv[])
                     {
                         isVisible[row][col] *= i;
                         b = true;
-                        std::cout << "b="<< i<<" ";
                     }
                 }
 
@@ -83,7 +78,6 @@ int main(int argc, char *argv[])
                     {
                         isVisible[row][col] *= i;
                         c = true;
-                        std::cout << "c="<< i<<" ";
                     }
                 }
 
@@ -93,15 +87,11 @@ int main(int argc, char *argv[])
                     {
                         isVisible[row][col] *= i;
                         d = true;
-                        std::cout << "d="<< i<<" ";
                     }
                 }
             }
-
-            std::cout << "(" << isVisible[row][col] << ")";
             max = std::max(isVisible[row][col], max);
         }
-        std::cout << "\n";
     }
 
     std::cout << "Best " << max << "\n";

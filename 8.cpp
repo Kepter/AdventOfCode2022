@@ -53,7 +53,6 @@ int main(int argc, char *argv[])
 
         for (int row = 0; row<rowCount; row++)
         {
-            //std::cout << "r: " << row << "c: " << col << std::endl;
             // Checking 0 to n
             if (height[row][col] > lastUp)
             {

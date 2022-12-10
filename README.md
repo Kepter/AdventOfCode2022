@@ -4,7 +4,8 @@ CPP solutions for AdventOfCode2022. These arn't polished as my goal is to comple
 
 Compiled with GCC:
 
- g++ <day>.cpp
+ g++ \<day\>.cpp
  
 Run in shell/terminal/cmd:
- a.exe data<day>.txt
+
+ a.exe data\<day\>.txt
